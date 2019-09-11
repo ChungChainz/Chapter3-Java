@@ -15,10 +15,10 @@ public class MetricConversion {
         System.out.print("Enter the amount of gallons here >>> ");
         gallons = inputDevice2.nextDouble();
 
-        inchesToCentimeteres(inches);
+        inchesToCentimeters(inches);
         gallonsToLiters(gallons);
     }
-    public static void inchesToCentimeteres (double inches)
+    public static void inchesToCentimeters (double inches)
     {
         final double IN_TO_CM = 2.54;
         double lengthConversion;

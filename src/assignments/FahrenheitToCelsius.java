@@ -46,10 +46,12 @@ public class FahrenheitToCelsius {
         if (celsius <= 0) {
                 System.out.println("It is " + temp + " degrees F. " + "\nIt is " + celsius + " degrees C." +
                         " \nIt was FREEZING!");
-            } else if (celsius >= 37.7778) {
+        }
+            else if (celsius >= 37.7778) {
                 System.out.println("It is " + temp + " degrees F. " + "\nIt is " + celsius + " degrees C." +
                         " \nIt was VERY HOT!");
-            } else {
+            }
+            else {
                 System.out.println("It is " + temp + " degrees F. " + "\nIt is " + celsius + " degrees C.");
             }
     }

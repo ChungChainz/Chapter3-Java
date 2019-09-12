@@ -4,6 +4,7 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.lang.*;
 
 public class PaintCalculator {
     public static void main(String[] args) {
@@ -27,12 +28,8 @@ public class PaintCalculator {
     }
 
     public static void wallArea(double length, double width, double height) {
-        double areaOfRoom = length * width * height;
-        double subtractedArea = length * width * 2;
-        double paintedArea;
+        double paintedArea = (height * width) * 2 + (height * length) * 2;
 
-
-        paintedArea = areaOfRoom - subtractedArea;
         numGallons(paintedArea);
     }
 
@@ -42,7 +39,7 @@ public class PaintCalculator {
 
         amountOfPaint = paintedArea / ONE_GALLON_OF_PAINT;
 
-        System.out.println(amountOfPaint + " gallons is needed to cover the room.");
+        System.out.println(Math.ceil(amountOfPaint) + " gallons is needed to cover the room.");
         priceTotalGallons(amountOfPaint);
     }
 
@@ -52,11 +49,11 @@ public class PaintCalculator {
 
         finalPrice = amountOfPaint * PRICE_OF_PAINT;
 
-        DecimalFormat df = new DecimalFormat("#.##");
-        df.setRoundingMode(RoundingMode.CEILING);
+        DecimalFormat df2 = new DecimalFormat("#.##");
+        df2.setRoundingMode(RoundingMode.CEILING);
         for (Number n : Arrays.asList(finalPrice)) {
             Double d = n.doubleValue();
-            System.out.println("The cost to paint the room will be $" + df.format(d) + ".");
+            System.out.println("The cost to paint the room will be $" + df2.format(d) + ".");
 
         }
 
